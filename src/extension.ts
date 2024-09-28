@@ -109,8 +109,10 @@ async function handleTimer(timer: typeof Timer, inputTime: string) {
 
     if (selection === "Restart") {
       vscode.window.showInformationMessage("Restarting...");
-      await handleTimer(timer, inputTime); // Restart the timer
+      await handleTimer(timer, inputTime); // Restart the timer , otherwise set the clock if exit is clicked or notifaction is dismissed
     } else if (selection === "Exit") {
+      timerMode = false;
+    } else {
       timerMode = false;
     }
   });
