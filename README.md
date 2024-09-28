@@ -19,24 +19,15 @@ This extension requires the following packages:
 
 ## Installation
 
-1. To install the Yeoman generator for creating VSCode extensions, run the following command in your terminal (Note that you must have [git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en) installed):
+1. Copy the extension files to your local directory. Be sure the `command` object in `package.json` is equal to `"myCommandID"` in extentions.ts (clocktimer.timer). Also in `package.json`, `title` should be `"Timer"`, `name` and `displayName` should be `"clocktimer"`.
 
-   ```bash
-   npm install --global yo generator-code
-   ```
-
-2. Run `yo code` to create a new VSCode extension.
-3. Copy the extension files to your local directory. Be sure the `command` object in `package.json` is equal to `"myCommandID"` in extentions.ts (clocktimer.timer). Also in `package.json`, `title` should be `"Timer"`, `name` and `displayName` should be `"clocktimer"`.
-
-- `package.json` dependencies may vary on the Operating System so ensure those parameters stay persistent is crucial.
-
-4. To install the necessary dependencies manually, run the following command in your terminal :
+2. To install the necessary dependencies manually, run the following command in your terminal (Note that you must have [git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en) installed):
 
    ```bash
    npm install moment-timer easytimer.js
    ```
 
-5. Or you can run this command to install dependencies listed in `package.json`:
+3. Or you can run this command to install dependencies listed in `package.json`:
 
    ```bash
    npm install
