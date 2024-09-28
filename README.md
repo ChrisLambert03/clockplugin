@@ -19,35 +19,53 @@ This extension requires the following packages:
 
 ## Installation
 
-1. Copy the extention files in your local directory
+1. To install the Yeoman generator for creating VSCode extensions, run the following command in your terminal (Note that you must have [git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en) installed):
 
-To install the necessary dependencies manually, run the following command in your terminal (Note that you must have git and Node.js installed):
+   ```bash
+   npm install --global yo generator-code
+   ```
 
-```bash
-npm install moment-timer easytimer.js
-```
+2. Run `yo code` to create a new VSCode extension.
+3. Copy the extension files to your local directory. Be sure the `command` object in `package.json` is equal to `"myCommandID"` in extentions.ts (clocktimer.timer). Also in `package.json`, `title` should be `"Timer"`, `name` and `displayName` should be `"clocktimer"`.
 
-Or you can run this to install dependencies listed in package.json
+- `package.json` dependencies may vary on the Operating System so ensure those parameters stay persistent is crucial.
 
-```bash
-npm install
-```
+4. To install the necessary dependencies manually, run the following command in your terminal :
 
-## Usage
+   ```bash
+   npm install moment-timer easytimer.js
+   ```
 
-1. Install the extension in Visual Studio Code.
-2. Click on the status bar item to open the timer input prompt.
-3. Enter the time in the HH:MM:SS format.
-4. The timer will start counting down, and the status bar will update to show the remaining time.
-5. Once the timer reaches zero, a prompt will appear asking if you want to restart the timer or exit.
+5. Or you can run this command to install dependencies listed in `package.json`:
+
+   ```bash
+   npm install
+   ```
 
 ## Activation
 
-The extension activates when you open Visual Studio Code and run `>Timer` in the Command Palette
+The extension activates when you open a Visual Studio Code window with the extension and run `>Timer` in the Command Palette
+
+## Usage
+
+1. Open the extention files in a VsCode Window
+2. Select Run or simply press F5.
+3. In the new window, open the command palette and type `>Timer` and enter.
+4. Click on the status bar item to open the timer input prompt.
+5. Enter the time in the HH:MM:SS format.
+6. The timer will start counting down, and the status bar will update to show the remaining time.
+7. Once the timer reaches zero, a prompt will appear asking if you want to restart the timer or exit.
 
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Resources
+
+Attacehd are link to the VsCode sample extentions provided by Microsoft under an MIT license:
+
+- https://github.com/microsoft/vscode-extension-samples/tree/main/quickinput-sample
+- https://github.com/microsoft/vscode-extension-samples/tree/main/statusbar-sample
 
 ## Acknowledgments
 
